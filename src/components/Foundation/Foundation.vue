@@ -5,7 +5,9 @@
 <script>
 export default {
   name: 'Foundation',
-  data: {}
+  data: function() {
+return {};
+}
 }
 </script>
 

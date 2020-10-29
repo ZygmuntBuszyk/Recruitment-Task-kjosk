@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Main msg="MAIN COMPONENT"/>
+    <Main :msg = msg />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'App',
   components: {
     Main
+  },
+  data() {
+    return {
+      msg : 'Foudation Management Application'
+    }
   }
 }
 </script>
