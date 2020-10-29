@@ -1,12 +1,18 @@
 <template>
   <div class="main">
     <h1>{{ msg }}</h1>
+    <SwitchComponent />
   </div>
 </template>
 
 <script>
+import SwitchComponent from './Switch.vue'
+
 export default {
   name: 'Main',
+  components: {
+    SwitchComponent
+  },
   props: {
     msg: String
   }
