@@ -47,12 +47,14 @@
 </template>
 
 <script>
+import Enums from '../_enums/Global.enum'
+
 export default {
     name: 'SwitchComponent',
     data() {
         return {
-            Foundation: "Foundation",
-            Category: "Category",
+            Foundation: Enums.Foundation,
+            Category: Enums.Category,
             names:  [
                 1, 2
             ]

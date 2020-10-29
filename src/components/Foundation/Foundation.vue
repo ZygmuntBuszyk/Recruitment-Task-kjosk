@@ -6,7 +6,7 @@
 export default {
   name: 'Foundation',
   data: function() {
-return {};
+    return {};
 }
 }
 </script>
