@@ -6,19 +6,19 @@ export default {
         return Api().get(`${name}`)
     },
 
-    getFoundation(name,id) {
+    getOneService(name,id) {
         return Api().get(`${name}/${id}`)
     },
 
-    createFoundation(name,data) {
+    createService(name,data) {
         return Api().post(`${name}`, data)
     },
 
-    updateFoundation(name, data) {
+    updateService(name, data) {
         return Api().put(`${name}`, data)
     },
 
-    deleteFoundation(name, id) {
+    deleteService(name, id) {
         return Api().delete(`${name}/${id}`)
     },
 }
