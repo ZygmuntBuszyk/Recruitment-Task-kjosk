@@ -5,17 +5,16 @@
       color="deep-purple accent-4"
       right
     >
-      <v-tab v-on:click="active=true">{{Foundation}}</v-tab>
-      <v-tab v-on:click="active=false">{{Category}}</v-tab>
-
+      <v-tab v-on:click="active=0">{{Foundation}}</v-tab>
+      <v-tab v-on:click="active=1">{{Category}}</v-tab>
+      <v-tab v-on:click="active=2"> <v-icon class="view">fa fa-plus</v-icon> </v-tab>
       <v-tab-item
-        v-for="n in 2"
+        v-for="n in 3"
         :key="n"
       >
-
-        <FundationList v-show="active" />
-        <CategoryList v-show="!active" />
-        
+        <FundationList v-if="active == 0" />
+        <CategoryList v-if="active == 1" />
+        <AddFunctionality  v-if="active == 2"  />
       </v-tab-item>
     </v-tabs>
   </v-card>
@@ -26,6 +25,7 @@
 import Enums from '../_enums/Global.enum'
 import FundationList from './Foundation/FoundationList'
 import CategoryList from './Category/CaterogyList'
+import AddFunctionality from '../_directives/AddFunctionality'
 
 export default {
     name: 'SwitchComponent',
@@ -33,31 +33,17 @@ export default {
         return {
             Foundation: Enums.Foundation,
             Category: Enums.Category,
-            active: true
+            active: 0
         }
     },
     components: {
         FundationList,
-        CategoryList
+        CategoryList,
+        AddFunctionality
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    // .switchComponent {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     width: 100%;
-    //     height: 20%;
-    //     background-color: red ;
 
-    //     div {
-    //         margin: 20px;
-
-    //         button {
-    //             padding: 20px;
-    //         }
-    //     }
-    // }
 </style>

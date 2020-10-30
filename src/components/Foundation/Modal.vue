@@ -59,7 +59,15 @@ export default {
      name: 'Modal',
      data() {
          return {
-             dialog: false
+             dialog: false,
+             FoundationToEdit: {
+                    id : this.foundation.id,
+                    name : this.foundation.name,
+                    shortDescription : this.foundation.shortDescription,
+                    htmlDescription : this.foundation.htmlDescription,
+                    foundationCategoryId : this.foundation.foundationCategoryId,
+                    isGlobal : this.foundation.isGlobal
+             }
          }
      },
      props: {

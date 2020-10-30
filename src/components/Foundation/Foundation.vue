@@ -6,7 +6,6 @@
 <div class="viewBox" @click="click"  > 
 <v-icon @click="click" class="view">fa fa-search</v-icon>
 </div>
-    
 
      <div>
         <p> Name: {{foundation.name}} </p>
