@@ -1,8 +1,6 @@
 <template>
     <v-container fluid>
         <v-row>
-               <!-- v-for="i in foundations"
-                :key="i" -->
             <v-col
                 v-for="(foundation,index) in foundations" :key="index"
                 cols="12"

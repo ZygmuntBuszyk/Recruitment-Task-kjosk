@@ -55,6 +55,7 @@ export default {
 <style lang="scss" scoped>
     .Foundation {
         display: flex;
+            text-align: initial;
         width: 100%;
         position: relative;
 

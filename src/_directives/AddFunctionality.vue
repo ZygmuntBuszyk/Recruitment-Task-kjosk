@@ -42,6 +42,7 @@
       v-model.number="foundationCategoryId"
       :rules="categoryRules"
       label="Category"
+      type = number
       required
     ></v-text-field>
      <v-text-field
@@ -184,6 +185,8 @@ export default {
             CrudService.createService(Enums.Foundation,data).then((res) => {
                 console.log(res)
                 this.cleanForm();
+            }).catch((err)=> {
+                console.log(err)
             })
             
       },
@@ -196,6 +199,8 @@ export default {
             CrudService.createService(Enums.FoundationCategory, data).then((res) => {
                 console.log(res)
                 this.cleanForm();
+            }).catch((err)=> {
+                console.log(err)
             })
       }
     },

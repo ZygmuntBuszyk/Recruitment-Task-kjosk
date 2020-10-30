@@ -1,7 +1,7 @@
 <template>
   <div class="Category">
-        <h3> Name: </h3>
-        <p> Description: </p>
+        <p> Name: {{Category.name}}</p>
+        <p> Description: {{Category.description}} </p>
 
   </div>
 </template>
@@ -13,11 +13,21 @@ export default {
     return {
         Name: String,
         Description: String
-    };
-}
+    }
+},
+props : {
+      Category: Object
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .Category {
+        width: 100%;
+        position: relative;
+     
+     p {
+       padding: 5px;
+     }
+    }
 </style>
